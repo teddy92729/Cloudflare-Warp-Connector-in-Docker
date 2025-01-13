@@ -3,7 +3,7 @@
 編譯指令
 
 ```
-docker build . --tag "warp"
+docker build https://github.com/teddy92729/Cloudflare-Warp-Connector-in-Docker.git --tag warp
 ```
 
 啟動指令
