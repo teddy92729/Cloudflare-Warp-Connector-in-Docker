@@ -17,4 +17,4 @@ if [ ! -f /inited ]; then
     warp-cli --accept-tos connect > /dev/null;
 fi
 
-bash;
+exec "$@"

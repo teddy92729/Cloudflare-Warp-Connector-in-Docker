@@ -1,4 +1,5 @@
 FROM ubuntu:24.04 AS warp
+LABEL maintainer="teddy92729 <teddy92729@gmail.com>"
 
 RUN set -eux; \
     apt update; \
@@ -9,6 +10,7 @@ RUN set -eux; \
     apt install -y cloudflare-warp
 
 FROM ubuntu:24.04 AS dist
+LABEL maintainer="teddy92729 <teddy92729@gmail.com>"
 
 RUN set -eux; \
     apt update; \
@@ -24,5 +26,5 @@ RUN set -eux; \
 WORKDIR /var/lib/cloudflare-warp
 
 COPY entrypoint.sh /entrypoint.sh
-
 ENTRYPOINT [ "/entrypoint.sh" ]
+CMD [ "/bin/bash" ]
