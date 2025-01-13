@@ -23,6 +23,6 @@ RUN set -eux; \
 
 WORKDIR /var/lib/cloudflare-warp
 
-COPY entrypoint.sh /entrypoint.sh
+COPY --chmod=755 entrypoint.sh /entrypoint.sh
 ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "/bin/bash" ]
